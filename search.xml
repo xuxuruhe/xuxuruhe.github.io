@@ -14,6 +14,31 @@
     </entry>
     
     <entry>
+      <title>Thinkphp Apache配置.md</title>
+      <link href="/2017/12/22/thinkphp%20Apache%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/12/22/thinkphp%20Apache%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="官方版本"><a href="#官方版本" class="headerlink" title="官方版本"></a>官方版本</h1>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt; </span><br><span class="line">      Options +FollowSymlinks -Multiviews  </span><br><span class="line">        RewriteEngine On</span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">    RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure><p> <strong>如果用的phpstudy，规则如下: </strong></p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;  </span><br><span class="line">    Options +FollowSymlinks -Multiviews  </span><br><span class="line">    RewriteEngine on </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f  </span><br><span class="line">    RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1] </span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure><p> <strong> tp5如果你使用的apache版本使用上面的方式无法正常隐藏index.php，可以尝试使用下面的方式配置.htaccess文件 </strong></p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt; </span><br><span class="line">    Options +FollowSymlinks -Multiviews </span><br><span class="line">    RewriteEngine on </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f </span><br><span class="line">    RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]  </span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Thinkphp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PHP </tag>
+            
+            <tag> Apache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Markdown语法</title>
       <link href="/2017/10/30/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8CSDN-markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
       <url>/2017/10/30/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8CSDN-markdown%E7%BC%96%E8%BE%91%E5%99%A8/</url>

@@ -1792,6 +1792,7 @@ pre .javascript .function {
   color: #fc6423;
   border: 1px solid #fc6423;
   border-radius: 4px;
+  width: 50%;
 }
 .feed-link a i {
   color: #fc6423;
@@ -1799,10 +1800,10 @@ pre .javascript .function {
 }
 .feed-link a:hover {
   color: #fff;
-  background: #fc6423;
+  background: #196423;
 }
 .feed-link a:hover i {
-  color: #fff;
+  color: #f00 /*white;*/;
 }
 .links-of-author {
   margin-top: 20px;
@@ -1823,7 +1824,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4b7ce5;
+  background: #04ad2f;
 }
 .links-of-blogroll {
   font-size: 13px;
