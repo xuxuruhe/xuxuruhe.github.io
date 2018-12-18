@@ -84,14 +84,14 @@
 <meta name="description" content="官方版本  1234567&amp;lt;IfModule mod_rewrite.c&amp;gt;   	    Options +FollowSymlinks -Multiviews          RewriteEngine On	    RewriteCond %&amp;#123;REQUEST_FILENAME&amp;#125; !-d	    RewriteCond %&amp;#123;REQUEST_FILENA">
 <meta name="keywords" content="PHP,Apache">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Thinkphp Apache配置.md">
+<meta property="og:title" content="Thinkphp Apache配置">
 <meta property="og:url" content="https://xuxuruhe.github.io/2017/12/22/thinkphp Apache配置/index.html">
 <meta property="og:site_name" content="僵尸先生的咕嘎说">
 <meta property="og:description" content="官方版本  1234567&amp;lt;IfModule mod_rewrite.c&amp;gt;   	    Options +FollowSymlinks -Multiviews          RewriteEngine On	    RewriteCond %&amp;#123;REQUEST_FILENAME&amp;#125; !-d	    RewriteCond %&amp;#123;REQUEST_FILENA">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T08:19:38.615Z">
+<meta property="og:updated_time" content="2018-11-29T06:31:29.030Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Thinkphp Apache配置.md">
+<meta name="twitter:title" content="Thinkphp Apache配置">
 <meta name="twitter:description" content="官方版本  1234567&amp;lt;IfModule mod_rewrite.c&amp;gt;   	    Options +FollowSymlinks -Multiviews          RewriteEngine On	    RewriteCond %&amp;#123;REQUEST_FILENAME&amp;#125; !-d	    RewriteCond %&amp;#123;REQUEST_FILENA">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>Thinkphp Apache配置.md | 僵尸先生的咕嘎说</title>
+  <title>Thinkphp Apache配置 | 僵尸先生的咕嘎说</title>
   
 
 
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Thinkphp Apache配置.md</h1>
+          <h1 class="post-title" itemprop="name headline">Thinkphp Apache配置</h1>
         
 
         <div class="post-meta">
@@ -367,10 +367,15 @@
 
       
         <h1 id="官方版本"><a href="#官方版本" class="headerlink" title="官方版本"></a>官方版本</h1>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt; </span><br><span class="line">  	    Options +FollowSymlinks -Multiviews  </span><br><span class="line">        RewriteEngine On</span><br><span class="line">	    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">	    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">	    RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
-<p> <strong>如果用的phpstudy，规则如下: </strong></p>
+<ul>
+<li>如果用的phpstudy，规则如下: </li>
+</ul>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;  </span><br><span class="line">    Options +FollowSymlinks -Multiviews  </span><br><span class="line">    RewriteEngine on </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f  </span><br><span class="line">    RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1] </span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
-<p> <strong> tp5如果你使用的apache版本使用上面的方式无法正常隐藏index.php，可以尝试使用下面的方式配置.htaccess文件 </strong></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt; </span><br><span class="line">    Options +FollowSymlinks -Multiviews </span><br><span class="line">    RewriteEngine on </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f </span><br><span class="line">    RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]  </span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>tp5如果你使用的apache版本使用上面的方式无法正常隐藏index.php，可以尝试使用下面的方式配置.htaccess文件 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt; </span><br><span class="line">    Options +FollowSymlinks -Multiviews </span><br><span class="line">    RewriteEngine on </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d </span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f </span><br><span class="line">    RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]  </span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -413,8 +418,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/26/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/22/tp_nginx/" rel="prev" title="适合Thinkphp的三种URL模式的Nginx配置">
+                适合Thinkphp的三种URL模式的Nginx配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -494,7 +499,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -516,7 +521,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
