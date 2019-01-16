@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="PHP,Nginx,">
+  <meta name="keywords" content="PHP,tp,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="#完美支持普通,兼容,pathinfo,rewrite4种url模式    123456789101112131415161718192021222324252627282930313233343536373839404142434445server &amp;#123;    listen       80;    server_name  thinkphp.lo;    root /var/www;">
-<meta name="keywords" content="PHP,Nginx">
+<meta name="description" content="#如果没有报错只是返回 false 的话 可能就是 ##12345第一， php.ini里的两个都要打开，其实很多人的都是打开的;extension=php_sockets.dll;extension=php_openssl.dll 第二， 代码中的$mail-&amp;gt;Password = &apos;**********&apos;; //发信人的邮箱密码">
+<meta name="keywords" content="PHP,tp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="适合Thinkphp的三种URL模式的Nginx配置">
-<meta property="og:url" content="https://xuxuruhe.github.io/2017/12/22/tp_nginx/index.html">
+<meta property="og:title" content="PHPmailer">
+<meta property="og:url" content="https://xuxuruhe.github.io/2018/10/19/PHPmailer/index.html">
 <meta property="og:site_name" content="僵尸先生的咕嘎说">
-<meta property="og:description" content="#完美支持普通,兼容,pathinfo,rewrite4种url模式    123456789101112131415161718192021222324252627282930313233343536373839404142434445server &amp;#123;    listen       80;    server_name  thinkphp.lo;    root /var/www;">
+<meta property="og:description" content="#如果没有报错只是返回 false 的话 可能就是 ##12345第一， php.ini里的两个都要打开，其实很多人的都是打开的;extension=php_sockets.dll;extension=php_openssl.dll 第二， 代码中的$mail-&amp;gt;Password = &apos;**********&apos;; //发信人的邮箱密码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T10:06:18.148Z">
+<meta property="og:updated_time" content="2019-01-16T09:36:51.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="适合Thinkphp的三种URL模式的Nginx配置">
-<meta name="twitter:description" content="#完美支持普通,兼容,pathinfo,rewrite4种url模式    123456789101112131415161718192021222324252627282930313233343536373839404142434445server &amp;#123;    listen       80;    server_name  thinkphp.lo;    root /var/www;">
+<meta name="twitter:title" content="PHPmailer">
+<meta name="twitter:description" content="#如果没有报错只是返回 false 的话 可能就是 ##12345第一， php.ini里的两个都要打开，其实很多人的都是打开的;extension=php_sockets.dll;extension=php_openssl.dll 第二， 代码中的$mail-&amp;gt;Password = &apos;**********&apos;; //发信人的邮箱密码">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://xuxuruhe.github.io/2017/12/22/tp_nginx/">
+  <link rel="canonical" href="https://xuxuruhe.github.io/2018/10/19/PHPmailer/">
 
 
 
 
 
-  <title>适合Thinkphp的三种URL模式的Nginx配置 | 僵尸先生的咕嘎说</title>
+  <title>PHPmailer | 僵尸先生的咕嘎说</title>
   
 
 
@@ -277,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xuxuruhe.github.io/2017/12/22/tp_nginx/">
+    <link itemprop="mainEntityOfPage" href="https://xuxuruhe.github.io/2018/10/19/PHPmailer/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gordon xu">
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">适合Thinkphp的三种URL模式的Nginx配置</h1>
+          <h1 class="post-title" itemprop="name headline">PHPmailer</h1>
         
 
         <div class="post-meta">
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T16:22:01+08:00">
-                2017-12-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-19T15:12:58+08:00">
+                2018-10-19
               </time>
             
 
@@ -329,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Thinkphp/" itemprop="url" rel="index">
-                    <span itemprop="name">Thinkphp</span>
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
                   </a>
                 </span>
 
@@ -366,7 +366,8 @@
       
 
       
-        <p>#完美支持普通,兼容,pathinfo,rewrite4种url模式<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  thinkphp.lo;</span><br><span class="line">    root /var/www;</span><br><span class="line">    index  index.html index.htm index.php;</span><br><span class="line">    error_page  404              /404.html;</span><br><span class="line">    location = /404.html &#123;</span><br><span class="line">        return 404 &apos;Sorry, File not Found!&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page  500 502 503 504  /50x.html;</span><br><span class="line">    location = /50x.html &#123;</span><br><span class="line">        root   /usr/share/nginx/html; # windows用户替换这个目录</span><br><span class="line">    &#125;</span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files $uri @rewrite;</span><br><span class="line">    &#125;</span><br><span class="line">    location @rewrite &#123;</span><br><span class="line">        set $static 0;</span><br><span class="line">        if  ($uri ~ \.(css|js|jpg|jpeg|png|gif|ico|woff|eot|svg|css\.map|min\.map)$) &#123;</span><br><span class="line">            set $static 1;</span><br><span class="line">        &#125;</span><br><span class="line">        if ($static = 0) &#123;</span><br><span class="line">            rewrite ^/(.*)$ /index.php?s=/$1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ /Uploads/.*\.php$ &#123;</span><br><span class="line">        deny all;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ \.php/ &#123;</span><br><span class="line">       if ($request_uri ~ ^(.+\.php)(/.+?)($|\?)) &#123; &#125;</span><br><span class="line">       fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">       include fastcgi_params;</span><br><span class="line">       fastcgi_param SCRIPT_NAME     $1;</span><br><span class="line">       fastcgi_param PATH_INFO       $2;</span><br><span class="line">       fastcgi_param SCRIPT_FILENAME $document_root$1;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ /\.ht &#123;</span><br><span class="line">        deny  all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>#如果没有报错只是返回 false 的话 可能就是</p>
+<p>##<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">第一， php.ini里的两个都要打开，其实很多人的都是打开的</span><br><span class="line">;extension=php_sockets.dll</span><br><span class="line">;extension=php_openssl.dll </span><br><span class="line">第二， 代码中的</span><br><span class="line">$mail-&gt;Password = '**********'; //发信人的邮箱密码</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -386,7 +387,7 @@
           
             <a href="/tags/PHP/" rel="tag"># PHP</a>
           
-            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+            <a href="/tags/tp/" rel="tag"># tp</a>
           
         </div>
       
@@ -399,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/22/thinkphp Apache配置/" rel="next" title="Thinkphp Apache配置">
-                <i class="fa fa-chevron-left"></i> Thinkphp Apache配置
+              <a href="/2018/09/28/tp5-1-htaccess/" rel="next" title="'tp5.1_htaccess'">
+                <i class="fa fa-chevron-left"></i> 'tp5.1_htaccess'
               </a>
             
           </div>
@@ -409,8 +410,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/28/tp5-1-htaccess/" rel="prev" title="'tp5.1_htaccess'">
-                'tp5.1_htaccess' <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/26/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
