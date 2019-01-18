@@ -3,6 +3,17 @@
   
     
     <entry>
+      <title>aaa</title>
+      <link href="/2019/01/18/aaa/"/>
+      <url>/2019/01/18/aaa/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
       <title>&#39;PHP中bind与bindTo&#39;</title>
       <link href="/2018/12/19/bind%E4%B8%8EbindTo/"/>
       <url>/2018/12/19/bind%E4%B8%8EbindTo/</url>
@@ -67,6 +78,31 @@
             <tag> PHP </tag>
             
             <tag> tp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>phpStudy中的mysql升级</title>
+      <link href="/2018/10/18/phpStudy%E4%B8%AD%E7%9A%84mysql%E5%8D%87%E7%BA%A7/"/>
+      <url>/2018/10/18/phpStudy%E4%B8%AD%E7%9A%84mysql%E5%8D%87%E7%BA%A7/</url>
+      
+        <content type="html"><![CDATA[<p>#关于MYSQL的升级</p><blockquote><p>首先你的先去<a href="https://dev.mysql.com/downloads/" target="_blank" rel="noopener">这个mysql的官网</a>下载你想要的mysql版本<br>然后找到你的phpStudy的mysql目录做个备份<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -remove</span><br></pre></td></tr></table></figure></p></blockquote><p>运行这个命令,然后清空目录,把你下载的新版本放到该目录下<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysqld install</span><br><span class="line">mysqld --initialize --user=mysql --console</span><br><span class="line">##这个会产生一个临时密码 localhost：********  要保存</span><br><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure></p><p>然后修改密码，导入之前的数据</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> php </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PHP </tag>
+            
+            <tag> Apache </tag>
             
         </tags>
       
